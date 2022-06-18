@@ -8,8 +8,9 @@ import { CompileError } from '../error';
 import { run } from '../sandbox';
 import signals from '../signals';
 import { copyInDir, parseFilename } from '../utils';
+import { Context } from './interface';
 
-export const judge = async (ctx) => {
+export const judge = async (ctx: Context) => {
     if (ctx.config.template) {
         if (ctx.config.template[ctx.lang]) {
             const tpl = ctx.config.template[ctx.lang];
